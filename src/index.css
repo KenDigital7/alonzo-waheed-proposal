@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Brand Colors */
+  --deep-navy: #0a2540;
+  --rich-gold: #b88a44;
+  --charcoal-gray: #3a3a3a;
+  --warm-taupe: #c5b8a5;
+  --ivory-white: #f8f6f2;
+  --font-title: 'Gotham', 'Montserrat', 'Arial Narrow', Arial, sans-serif;
+  --font-subtitle: 'Quicksand', 'Avenir Next', 'Segoe UI', sans-serif;
+  --font-heading: 'Optima', 'Palatino Linotype', 'Book Antiqua', serif;
+  --font-body: 'Montserrat', 'Segoe UI', sans-serif;
+  --font-caption: 'Montserrat', 'Segoe UI', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  background-color: var(--charcoal-gray);
+  color: var(--ivory-white);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+p {
+  margin: 0;
+}
+
+.display-title {
+  font-family: var(--font-title);
+  font-size: clamp(3.25rem, 6vw, 5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 0.96;
+  letter-spacing: 0.06em;
+  text-wrap: balance;
+}
+
+.display-subtitle {
+  font-family: var(--font-subtitle);
+  font-size: clamp(1.5rem, 2.2vw, 2.25rem);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+  text-wrap: pretty;
+}
+
+.heading-main {
+  font-family: var(--font-heading);
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: 0.01em;
+  text-wrap: balance;
+}
+
+.heading-sub {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 2.1vw, 2rem);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: 0.01em;
+  text-wrap: balance;
+}
+
+.section-kicker {
+  font-family: var(--font-subtitle);
+  font-size: clamp(0.875rem, 0.9rem + 0.2vw, 1.125rem);
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.body-copy {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 0.97rem + 0.24vw, 1.125rem);
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+  text-wrap: pretty;
+}
+
+.body-copy-sm {
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 0.92rem + 0.18vw, 1rem);
+  font-weight: 400;
+  line-height: 1.72;
+  letter-spacing: 0.01em;
+  text-wrap: pretty;
+}
+
+.quote-copy {
+  font-family: var(--font-body);
+  font-size: clamp(1.125rem, 1.02rem + 0.5vw, 1.4rem);
+  line-height: 1.75;
+  font-style: italic;
+  text-wrap: pretty;
+}
+
+.caption-copy {
+  font-family: var(--font-caption);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.06em;
+}
+
+.meta-copy {
+  font-family: var(--font-caption);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.measure-body {
+  max-width: 68ch;
+}
+
+.measure-compact {
+  max-width: 60ch;
+}
+
+.muted-on-dark {
+  color: rgba(248, 246, 242, 0.8);
+}
+
+.muted-on-light {
+  color: rgba(58, 58, 58, 0.8);
+}
+
+.subtle-on-dark {
+  color: rgba(248, 246, 242, 0.72);
+}
+
+.subtle-on-light {
+  color: rgba(58, 58, 58, 0.72);
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--rich-gold);
+  outline-offset: 4px;
+}
+
+/* Scroll-triggered animation base state */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-on-scroll-fade {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.animate-on-scroll-fade.is-visible {
+  opacity: 1;
+}
