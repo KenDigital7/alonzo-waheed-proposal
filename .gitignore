@@ -28,3 +28,10 @@ build/
 *.gif
 capture_screenshot.*
 proposal_screenshot.png
+
+# BUT include source assets
+!src/assets/**/*.png
+!src/assets/**/*.jpg
+!src/assets/**/*.jpeg
+!src/assets/**/*.gif
+
