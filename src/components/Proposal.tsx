@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import alonzoHero from '../assets/images/alonzo-hero.png'
+import heroBg from '../assets/images/hero-bg.png'
 
 // ─── Scroll animation hook ────────────────────────────────────────────────────
 function useScrollReveal(className = 'animate-on-scroll') {
@@ -38,13 +39,15 @@ function Section({
   id,
   className,
   children,
+  style,
 }: {
   id: string
   className?: string
+  style?: React.CSSProperties
   children: React.ReactNode
 }) {
   return (
-    <section id={id} className={className}>
+    <section id={id} className={className} style={style}>
       {children}
     </section>
   )
@@ -202,7 +205,16 @@ export default function Proposal() {
       <Section
         id="hero"
         className="relative min-h-screen bg-[#3a3a3a] flex flex-col justify-center px-6 md:px-16 lg:px-24 overflow-hidden"
+        style={{
+          backgroundImage: `url(${heroBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed',
+        }}
       >
+        {/* Overlay for readability */}
+        <div className="absolute inset-0 bg-black/40" />
+
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left side — content */}
           <div className="max-w-2xl">
