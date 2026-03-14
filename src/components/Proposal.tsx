@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import alonzoHero from '../../public/images/alonzo-hero.png'
 
 // ─── Scroll animation hook ────────────────────────────────────────────────────
 function useScrollReveal(className = 'animate-on-scroll') {
@@ -228,7 +229,7 @@ export default function Proposal() {
           {/* Right side — hero image */}
           <div className="relative hidden lg:flex items-center justify-center">
             <img
-              src="/images/alonzo-hero.png"
+              src={alonzoHero}
               alt="Alonzo Waheed"
               className="w-full h-auto max-w-md rounded-sm shadow-2xl"
             />
