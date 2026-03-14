@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import alonzoHero from '../../public/images/alonzo-hero.png'
+import alonzoHero from '../assets/images/alonzo-hero.png'
 
 // ─── Scroll animation hook ────────────────────────────────────────────────────
 function useScrollReveal(className = 'animate-on-scroll') {
